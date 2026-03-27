@@ -359,8 +359,8 @@ body {
 }
 
 .card-highlight {
-  border-color: rgba(232, 184, 75, 0.4);
-  background: linear-gradient(135deg, var(--dark-3), rgba(26, 122, 60, 0.15));
+  border-color: rgba(255, 255, 255, 0.07);
+  background: var(--dark-3);
 }
 
 .card-year {
@@ -414,6 +414,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
+  overflow: visible;
 }
 
 .cl-card {
@@ -421,17 +422,26 @@ body {
   border-left: 3px solid var(--green);
   padding: 1.8rem;
   border-radius: 0 4px 4px 0;
-  transition: border-color 0.25s, transform 0.25s;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cl-card[data-video-link] {
+  cursor: pointer;
 }
 
 .cl-card:hover {
   border-color: var(--gold);
-  transform: translateX(4px);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(232, 184, 75, 0.2);
+  z-index: 10;
 }
 
 .cl-card-featured {
-  background: linear-gradient(135deg, rgba(26, 122, 60, 0.2), var(--dark-3));
-  border-color: var(--gold);
+  background: var(--dark-3);
+  border-color: var(--green);
 }
 
 .cl-card-header {
@@ -480,6 +490,10 @@ body {
   position: relative;
   overflow: hidden;
   transition: transform 0.25s, border-color 0.25s;
+}
+
+.legend-card[data-wiki-link] {
+  cursor: pointer;
 }
 
 .legend-card::after {
@@ -804,6 +818,10 @@ body {
 .footer-copy {
   color: var(--gray);
   font-size: 0.8rem;
+}
+
+.footer-design strong {
+  color: var(--gold);
 }
 
 /* --- ANIMATIONS --- */

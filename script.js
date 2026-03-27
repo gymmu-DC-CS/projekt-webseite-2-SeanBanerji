@@ -1,10 +1,8 @@
-// =============================================
-//   THE BEAUTIFUL GAME — script.js
-// =============================================
+//   THE BEAUTIFUL GAME - script.js
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // --- NAVBAR: darken on scroll ---
+  // NAVBAR: darken on scroll
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelector('.nav-links');
   let lastScrollY = 0;
@@ -51,6 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   navLogo.style.cursor = 'pointer';
 
+  // --- LEGEND CARDS: open Wikipedia link ---
+  const legendCards = document.querySelectorAll('.legend-card[data-wiki-link]');
+  legendCards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      const wikiLink = card.getAttribute('data-wiki-link');
+      window.open(wikiLink, '_blank');
+    });
+  });
+
+  // --- CHAMPIONS LEAGUE CARDS: open YouTube video ---
+  const clCards = document.querySelectorAll('.cl-card[data-video-link]');
+  clCards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      const videoLink = card.getAttribute('data-video-link');
+      window.open(videoLink, '_blank');
+    });
+  });
+
   
   // --- SCROLL REVEAL ANIMATION ---
   const revealElements = document.querySelectorAll(
@@ -70,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 }  
   );
 
   revealElements.forEach(function (el) {
