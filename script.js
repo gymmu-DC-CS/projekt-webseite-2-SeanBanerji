@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
       question: 'In which year was the Football Association (FA) founded in England?',
       options: ['1848', '1863', '1871', '1888'],
       correct: 1,
-      fact: 'The FA was founded on 26 October 1863 at the Freemasons\' Tavern in London — making it the world\'s oldest football governing body.'
+      fact: 'The FA was founded on 26 October 1863 at the Freemasons\' Tavern in London - making it the world\'s oldest football governing body.'
     },
     {
       question: 'Which country has won the most FIFA World Cups?',
@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       question: 'What happened in the 2005 Champions League final?',
-      options: ['AC Milan won 3–1', 'Liverpool came back from 3–0 down to win on penalties', 'AC Milan trashed Liverpool 8-2', 'The Final got cancelled due to harsh weather and was never rescheduled'],
+      options: ['AC Milan won 3-1', 'Liverpool came back from 3-0 down to win on penalties', 'AC Milan trashed Liverpool 8-2', 'The Final got cancelled due to harsh weather and was never rescheduled'],
       correct: 1,
-      fact: 'AC Milan led 3–0 at half-time, but Liverpool scored three goals in six incredible minutes, drawing 3–3. They then won on penalties — one of the greatest comebacks ever.'
+      fact: 'AC Milan led 3-0 at half-time, but Liverpool scored three goals in six incredible minutes, drawing 3-3. They then won on penalties - one of the greatest comebacks ever.'
     },
     {
       question: 'Against which country did Maradona score the "Hand of God" goal in 1986?',

@@ -580,10 +580,13 @@ body {
   background: var(--dark-3);
   border-radius: 4px;
   border: 1px solid rgba(255,255,255,0.06);
-  transition: transform 0.25s;
+  transition: transform 0.25s, border-color 0.25s;
 }
 
-.moment:hover { transform: translateY(-3px); }
+.moment:hover { 
+  transform: translateY(-3px);
+  border-color: var(--gold);
+}
 
 .moment-tag {
   display: inline-block;
@@ -635,6 +638,11 @@ body {
   color: var(--gray-light);
   line-height: 1.75;
   position: relative;
+  transition: box-shadow 0.25s;
+}
+
+.fact-bubble:hover {
+  box-shadow: 0 0 20px rgba(232, 184, 75, 0.3);
 }
 
 .fact-bubble::before {
